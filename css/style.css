@@ -1,5 +1,40 @@
+/* INIZIALIZZAZIONE */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+/* HELPER */
+.rel{
+  position: relative;
+}
+.h-100 {
+  height: 100px;
+}
+/* GENERAL */
+
+/* HEADER */
+header .nav-bar .sub-nav-bar {
+  width: 200px;
+  height: calc(100vh - 100px);
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header .upgrade .sub-upgrade {
+  width: calc(100vw - 200px);
+  background-color: #070B12;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* MAIN */
+
+/* FOOTER */
+footer .player-bar {
+  width: 100vw;
+  background-color: #282828;
+  position: fixed;
+  bottom: 0;
 }
