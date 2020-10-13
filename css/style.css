@@ -9,7 +9,13 @@
   position: relative;
 }
 /* GENERAL */
-
+body {
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  font-size: 16px;
+  text-decoration: none;
+}
 /* HEADER */
 header .nav-bar .sub-nav-bar {
   width: 200px;
@@ -21,11 +27,25 @@ header .nav-bar .sub-nav-bar {
 }
 header .upgrade .sub-upgrade {
   width: calc(100vw - 200px);
-  height: 100px;
+  /* height: 100px; */
   background-color: #070B12;
   position: absolute;
   top: 0;
   right: 0;
+}
+header .upgrade .sub-upgrade .button-upgrade {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .upgrade .sub-upgrade .button-upgrade a {
+  color: white;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-right: 10px;
 }
 /* MAIN */
 main .sub-main {
