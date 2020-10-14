@@ -11,6 +11,12 @@
 .rel{
   position: relative;
 }
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .clearfix:after{
   content:””;
   display:table;
@@ -23,17 +29,20 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
-
+a {
+  text-decoration: none;
+}
 /* HEADER */
 header .nav-bar .sub-nav-bar {
   height: calc(100vh - 100px);
+  width: 200px;
   background-color: black;
   position: absolute;
   top: 0;
   left: 0;
 }
 header .nav-bar .sub-nav-bar .logo-spotify {
-  width: 200px;
+  width: 100%;
   height: 100px;
   display: flex;
   flex-direction: row;
@@ -46,18 +55,106 @@ header .nav-bar .sub-nav-bar .logo-spotify img {
 header .nav-bar .sub-nav-bar .centrature {
   width: 160px;
   margin:auto;
-  height: 100px;
 }
 header .nav-bar .sub-nav-bar .centrature img {
-  width: 30px;
+  width: 25px;
   vertical-align: middle;
+  margin-bottom: 5px;
 }
-header .nav-bar .sub-nav-bar .centrature span {
-  font-size: 14px;
+header .nav-bar .sub-nav-bar .centrature a {
+  font-size: 12px;
   color: #A3A3A3;
 }
-header .nav-bar .sub-nav-bar .centrature span:first-of-type {
+header .nav-bar .sub-nav-bar .centrature a:hover {
   color: white;
+}
+header .nav-bar .sub-nav-bar .centrature span {
+  display: inline-block;
+  font-weight: 500;
+}
+header .nav-bar .sub-nav-bar .centrature span.playlist {
+  font-size: 14px;
+  margin: 10px 0;
+  color: white;
+}
+header .nav-bar .sub-nav-bar .centrature .div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .nav-bar .sub-nav-bar .centrature .div .plus {
+  color: black;
+  background-color: #A3A3A3;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+}
+header .nav-bar .sub-nav-bar .centrature .div .plus span {
+  font-size: 24px;
+}
+header .nav-bar .sub-nav-bar .centrature .div a {
+  font-size: 16px;
+  margin-left: 5px;
+}
+header .nav-bar .sub-nav-bar .centrature .nome-playlist a {
+  display: block;
+  margin-top: 10px;
+}
+header .nav-bar .sub-nav-bar .install {
+  position: fixed;
+  bottom: 100px;
+  width: 200px;
+  background-color: black;
+}
+header .nav-bar .sub-nav-bar .install .centrature {
+  height: 60px;
+}
+header .nav-bar .sub-nav-bar .install .centrature img {
+  width: 10%;
+  margin-top: 5px;
+}
+header .nav-bar .sub-nav-bar .install .centrature img:nth-of-type(2) {
+  background-color: #A3A3A3;
+  border-radius: 50%;
+  padding: 3px;
+}
+header .nav-bar .sub-nav-bar .install .centrature span:last-of-type {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+header .nav-bar .sub-nav-bar .mini-logos {
+  width: 50px;
+}
+header .nav-bar .sub-nav-bar .mini-logos img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  margin-top: 5px;
+}
+header .nav-bar .sub-nav-bar .mini-logos img:first-of-type {
+  width: 80%;
+}
+header .nav-bar .sub-nav-bar .mini-install {
+  position: fixed;
+  bottom: 100px;
+  width: 50px;
+  background-color: black;
+  height: 60px;
+}
+header .nav-bar .sub-nav-bar .mini-install img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 5px;
+}
+header .nav-bar .sub-nav-bar .mini-install img:nth-of-type(2) {
+  background-color: #A3A3A3;
+  padding: 5px;
+  border-radius: 50%;
 }
 header .upgrade .sub-upgrade {
   width: calc(100vw - 200px);
@@ -75,12 +172,15 @@ header .upgrade .sub-upgrade .button-upgrade {
 }
 header .upgrade .sub-upgrade .button-upgrade a {
   font-size: 16px;
-  text-decoration: none;
   color: white;
   border: 1px solid white;
   border-radius: 30px;
   padding: 10px 20px;
   margin-right: 10px;
+}
+header .upgrade .sub-upgrade .button-upgrade a:hover {
+  color: #070B12;
+  background-color: white;
 }
 /* MAIN */
 main .sub-main {
@@ -104,6 +204,9 @@ footer .player-bar {
   header .nav-bar .sub-nav-bar {
     width: 50px;
   }
+  header .nav-bar .sub-nav-bar .logo-spotify, header .nav-bar .sub-nav-bar .centrature, header .nav-bar .sub-nav-bar .install {
+    display: none;
+  }
   header .upgrade .sub-upgrade {
     width: calc(100vw - 50px);
   }
@@ -112,11 +215,17 @@ footer .player-bar {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
-
+  header .nav-bar .sub-nav-bar .mini-logos, header .nav-bar .sub-nav-bar .mini-install {
+    display: none;
+  }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-
+  header .nav-bar .sub-nav-bar .mini-logos, header .nav-bar .sub-nav-bar .mini-install {
+    display: none;
+  }
 }
 @media screen and (min-width: 1200px) {
-
+  header .nav-bar .sub-nav-bar .mini-logos, header .nav-bar .sub-nav-bar .mini-install {
+    display: none;
+  }
 }
