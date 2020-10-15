@@ -186,10 +186,26 @@ header .upgrade .sub-upgrade .button-upgrade a:hover {
 main .sub-main {
   width: calc(100vw - 200px);
   height: calc(100vh - 200px);
+  overflow-y: auto;
   background-color: #141922;
   position: absolute;
   top: 100px;
   right: 0;
+}
+main .sub-main h1 {
+  color: white;
+  font-size: 20px;
+}
+main .sub-main h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  margin-top: 10px;
+}
+main .sub-main p {
+  font-size: 12px;
+  color: #A3A3A3;
+  margin-top: 10px;
 }
 main .sub-main .in-evidenza-ecc {
   width: 70%;
@@ -210,10 +226,52 @@ main .sub-main .in-evidenza-ecc a {
 main .sub-main .in-evidenza-ecc a:hover {
   color: white;
 }
+main .sub-main .main-big-row {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+main .sub-main .main-big-row .main-row-boxes {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+main .sub-main .main-big-row .main-row-boxes .main-box {
+  width: calc(100% / 6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+main .sub-main .main-big-row .main-row-boxes .main-box .main-img {
+  width: 90%;
+}
+main .sub-main .main-big-row .main-row-boxes .main-box .main-img img {
+  width: 100%;
+}
+main .sub-main .main-big-row .main-row-boxes .main-box .main-img span {
+  font-size: 30px;
+  color: white;
+}
+main .sub-main .main-big-row .main-row-boxes .main-box:hover .main-img img {
+  opacity: 0.5;
+}
+main .sub-main .main-big-row .main-row-boxes .main-box:not(:hover) .main-img span {
+  display: none;
+}
+main .sub-main .creato-per {
+}
+main .sub-main .popolari .tondo {
+  border-radius: 50%;
+}
 /* FOOTER */
 footer .player-bar {
   width: 100%;
-  min-width: 600px;
   height: 100px;
   background-color: #282828;
   position: fixed;
@@ -330,16 +388,47 @@ footer .player-bar .footer-right .long {
   main .sub-main {
     width: calc(100vw - 50px);
   }
+  main .sub-main .main-big-row .main-row-boxes .main-box {
+    width: calc(100% / 2);
+  }
+  main .sub-main h1 {
+    font-size: 28px;
+  }
+  main .sub-main h4 {
+    font-size: 20px;
+  }
+  main .sub-main p {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   header .nav-bar .sub-nav-bar .mini-logos, header .nav-bar .sub-nav-bar .mini-install {
     display: none;
+  }
+  main .sub-main .main-big-row .main-row-boxes .main-box {
+    width: calc(100% / 2);
+  }
+  main .sub-main .main-big-row {
+    width: 80%;
+  }
+  main .sub-main h1 {
+    font-size: 28px;
+  }
+  main .sub-main h4 {
+    font-size: 20px;
+  }
+  main .sub-main p {
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   header .nav-bar .sub-nav-bar .mini-logos, header .nav-bar .sub-nav-bar .mini-install {
     display: none;
   }
+  main .sub-main .main-big-row .main-row-boxes .main-box {
+    width: calc(100% / 4);
+  }
+
 }
 @media screen and (min-width: 1200px) {
   header .nav-bar .sub-nav-bar .mini-logos, header .nav-bar .sub-nav-bar .mini-install {
