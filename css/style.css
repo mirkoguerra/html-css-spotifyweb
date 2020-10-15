@@ -96,6 +96,10 @@ header .nav-bar .sub-nav-bar .centrature .div a {
   font-size: 16px;
   margin-left: 5px;
 }
+header .nav-bar .sub-nav-bar .centrature .nome-playlist {
+  height: 100px;
+  overflow-y: auto;
+}
 header .nav-bar .sub-nav-bar .centrature .nome-playlist a {
   display: block;
   margin-top: 10px;
@@ -157,7 +161,7 @@ header .nav-bar .sub-nav-bar .mini-install img:nth-of-type(2) {
   border-radius: 50%;
 }
 header .upgrade .sub-upgrade {
-  width: calc(100vw - 200px);
+  width: calc(100% - 200px);
   background-color: #070B12;
   position: absolute;
   top: 0;
@@ -184,7 +188,7 @@ header .upgrade .sub-upgrade .button-upgrade a:hover {
 }
 /* MAIN */
 main .sub-main {
-  width: calc(100vw - 200px);
+  width: calc(100% - 200px);
   height: calc(100vh - 200px);
   overflow-y: auto;
   background-color: #141922;
