@@ -6,3 +6,7 @@
 realizzazione dell'interfaccia grafica della web-app di Spotify; utilizzo di flex per implementare agevolmente la parte responsive.
 
 ![](foto1.jpg)
+
+![](spotify1.gif)
+
+![](spotify2.gif)
